@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1515929275 source:c:\users\mi\documents\code\dataparserer\src\analyser.cpp
+	"Analyser.h"
+	"DataLoader.h"
+	<iostream>
+
+1515929388 c:\users\mi\documents\code\dataparserer\include\analyser.h
+	<string>
+
+1515929560 c:\users\mi\documents\code\dataparserer\include\dataloader.h
+	<string>
+
+1515897556 source:c:\users\mi\documents\code\dataparserer\src\dataloader.cpp
+	"DataLoader.h"
+	<iostream>
+
