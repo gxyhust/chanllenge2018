@@ -1,15 +1,33 @@
-#include "DataLoader.h"
+#ifndef DATALOADER_H
+#define DATALOADER_H
+#include <fstream>
 #include <iostream>
+#include <vector>
+#include "Message.h"
+#include <string>
 
-void DataLoader::LoadData()
+#define FAKE "FAKE"
+#define RIGHTARROW ">"
+#define LEFTARROW "<"
+#define STARTENDFLAG "@"
+using namespace std;
+class DataLoader
 {
-    //ctor
-    CheckContract();
-    cout << "load data" << endl;
-}
+    public:
+        virtual vector<string> loadData(string &input);
+        void checkContract();
+        string inputFile;
 
-void DataLoader::CheckContract()
+    protected:
+
+    private:
+
+};
+
+class FileLoader:public DataLoader
 {
-    //ctor
-    cout << "check contract" << endl;
-}
+    public:
+        vector<string> loadData(string &contractFilePath);
+};
+
+#endif // DATALOADER_H
