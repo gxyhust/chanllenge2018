@@ -109,6 +109,9 @@ const int FIRSTELEMENT = 0;
 //    }
 //}
 
+
+
+
 Message Analyser::pushMsgPropertyValue(string &strMsg)
 {
     Message msg;
@@ -126,10 +129,9 @@ Message Analyser::pushMsgPropertyValue(string &strMsg)
     return msg;
 }
 
-vector<Message> Analyser::publishMsgInfo(string contractFilePath)
+vector<Message> Analyser::publishMsgInfo(string &contractFilePath)
 {
     FileLoader fileLoader;
-    vector<Message> vMsg;
     DataLoader *dataLoder = &fileLoader;
     vector<string> vStrMsg = dataLoder->loadData(contractFilePath);
     for (unsigned int i =0;i<vStrMsg.size();i++)
@@ -140,3 +142,13 @@ vector<Message> Analyser::publishMsgInfo(string contractFilePath)
     return vMsg;
 }
 
+vector<Message> getMsgProcess(string &contractFilePath, bool fake)
+{
+    publishMsgInfo(contractFilePath);
+    for(int i=0 ;i<vMsg.size();i++)
+    {
+
+    }
+
+
+}
