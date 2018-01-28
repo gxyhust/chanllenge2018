@@ -21,6 +21,7 @@ class Analyser
         vector<Message> vMsg;
         Message pushMsgPropertyValue(const string &strMsg);
         vector<Message> publishMsgInfo(const string &contractFilePath);
+        bool sendMsg(Message msg, bool fake);
 
 };
 

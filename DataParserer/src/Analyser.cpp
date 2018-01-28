@@ -152,3 +152,19 @@ vector<Message> getMsgProcess(string &contractFilePath, bool fake)
 
 
 }
+
+bool sendMsg(Message &msg, bool fake)
+{
+    string leftModelValue = msg.getPropertyValue(leftModel);
+    string rightModelValue = msg.getPropertyValue(rightModel);
+    string arrowValue = msg.getPropertyValue(arrow);
+
+    if (((leftModelValue.find(FAKE) != string::npos) && (arrowValue.find(RIGHTARROW) != string::npos)) ||
+        ((rightModelValue.find(FAKE) != string::npos) && (arrowValue.find(LEFTARROW) != string::npos)))
+    {
+        return true&fake;
+    }else
+    {
+        return false&fake;
+    }
+}
